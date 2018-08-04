@@ -6,6 +6,7 @@ import { ListaMensagensComponent } from './lista-mensagens/lista-mensagens.compo
 import { ListItemComponent } from '@app/components/list-item/list-item.component';
 import { ListGroupComponent } from '@app/components/list-group/list-group.component';
 import { MensagemSelecionadaComponent } from '@app/components/mensagem-selecionada/mensagem-selecionada.component';
+import { MessageNotFoundComponent } from '@app/components/message-not-found/message-not-found.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { MensagemSelecionadaComponent } from '@app/components/mensagem-seleciona
     ListaMensagensComponent,
     ListItemComponent,
     ListGroupComponent,
-    MensagemSelecionadaComponent
+    MensagemSelecionadaComponent,
+    MessageNotFoundComponent
   ]
 })
 export class MensagensModule { }
