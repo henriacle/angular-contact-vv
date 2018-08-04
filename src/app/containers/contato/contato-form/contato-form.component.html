@@ -1,0 +1,33 @@
+<h2 class="">
+    Entre em contato conosco
+</h2>
+
+<hr />
+
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="contatoForm" (ngSubmit)="sendFormContact(contatoForm.value)" novalidate>
+      <vv-form-group-container>
+        <label for="nome">Nome</label>
+        <input #vvInput id="nome" formControlName="nome" type="text" class="form-control" placeholder="Insira o seu nome" />
+      </vv-form-group-container>
+
+      <vv-form-group-container>
+        <label for="assunto">Assunto</label>
+        <vv-assunto formControlName="assunto" [assuntoList]="(assuntoList | async)?.assuntos | keys"></vv-assunto>
+      </vv-form-group-container>
+      <vv-form-group-container>
+        <label for="nome">Telefone</label>
+        <input #vvInput id="nome" formControlName="telefone" type="phone" class="form-control" placeholder="Insira o seu telefone"/>
+      </vv-form-group-container>
+      <vv-form-group-container>
+        <label for="nome" *ngIf="contatoForm.value.assunto">{{contatoForm.value.assunto}}</label>
+        <textarea #vvInput id="telefone" formControlName="mensagem" class="form-control" placeholder="Insira a sua mensagem"></textarea>
+        <small id="emailHelp" class="form-text text-muted text-right">{{ vvInput.value.length }} / 3000 caracteres</small>
+      </vv-form-group-container>
+
+      <button [disabled]="contatoForm.invalid" type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+  </div>
+</div>

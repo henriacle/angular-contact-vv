@@ -1,0 +1,9 @@
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{message.nome}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{message.assunto}} {{message.data | date:'dd/mm/yyyy hh:mm:ss'}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted">Contato: {{message.telefone}}</h6>
+      <p class="card-text">{{message.mensagem}}</p>
+      <button class="btn btn-danger" (click)="removerMensagemHandler(message)">Remover</button>
+    </div>
+  </div>

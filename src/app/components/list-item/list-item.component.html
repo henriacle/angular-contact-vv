@@ -1,0 +1,11 @@
+<li (click)="select(message)"
+class="list-group-item d-flex flex-column justify-content-between align-items-center"
+[ngClass]="{
+  'active': active
+}"
+>
+  <div class="d-flex w-100 justify-content-between">
+      {{message.nome}} - {{message.assunto}}
+      <small>{{message.data | date:'dd-mm-yyyy hh:mm:ss'}}</small>
+  </div>
+</li>

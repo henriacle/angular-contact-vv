@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-
-import { AppComponent } from './app.component';
-
+import { AppComponent } from '@app/app.component';
+import { AppRoutingModule } from '@app/app-routing.module';
+import { ContatoModule } from '@app/containers/contato/contato.module';
+import { SharedModule } from '@app/shared/shared.module';
+import { MensagensModule } from '@app/containers/mensagens/mensagens.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ContatoModule,
+    MensagensModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,9 @@
+<select
+  #assunto
+  (change)="change($event)"
+  class="form-control">
+  <option value="">Selecione um assunto</option>
+  <ng-template name="assunto" let-assunto="$implicit" ngFor [ngForOf]="assuntoList">
+    <option [value]="assunto.value">{{assunto.value}}</option>
+  </ng-template>
+</select>

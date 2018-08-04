@@ -1,0 +1,5 @@
+<ul class="list-group">
+  <ng-template let-message="$implicit" ngFor [ngForOf]="messages">
+    <vv-list-item [active]="currentMessage?.data === message.data" (selectMessage)="selectMessage($event)" [message]="message"></vv-list-item>
+  </ng-template>
+</ul>

@@ -1,0 +1,10 @@
+<h1>Selecione uma mensagem</h1>
+
+<div class="row">
+  <div class="col-md-6">
+    <vv-list-group (selectedMessage)="selectedMessage = $event" [messages]="messages"></vv-list-group>
+  </div>
+  <div class="col-md-6" *ngIf="selectedMessage">
+    <vv-mensagem-selecionada [message]="selectedMessage" (removerMensagem)="removerMensagem($event)"></vv-mensagem-selecionada>
+  </div>
+</div>
